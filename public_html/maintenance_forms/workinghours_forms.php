@@ -1,0 +1,57 @@
+<html>
+<head>
+        <meta name="viewport" content="with=device-width",initial-scale=1.0">                                                                   
+        <title>Doctor Form</title>
+        <link rel="stylesheet" href="patientform.css">  
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">                     
+    </head>
+<body>
+<div class="form-style-10">
+<h1>Declare your working hours!</h1>
+<form action="workinghours.php" method="post">
+	<div>Enter your working hours for the week (staring & ending):</div>
+	<div class="section"><span>1</span>DB</div>
+    <div class="inner-wrap">
+        <label>DB uname<input type="text" name="uname" /></label>
+        <label>Password <input type="password" name="dbpw" /></label>
+    </div>
+    <expertiselabel>Choose Clinic:</expertiselabel>
+    <select name ="clinic"><?php
+      $db=mysqli_connect("localhost","group17","troopsstuck","group17");
+      if(mysqli_connect_errno()){
+          echo "Failed to connect". mysqli_connect_error();
+      }  
+      $getexpdataquery= "SELECT * FROM Clinic;";
+      $result= mysqli_query($db,$getexpdataquery);
+      while($row= mysqli_fetch_array($result)){
+        echo "<option value='".$row['clinicid']."'>".$row['cname']."</option>";
+      }
+      ?>    </select>
+	<div class="inner-wrap">
+        <label>Sunday: <input type="time" name="week11" /></label> <input type="time" name="week12" /></label>
+		<div></div>
+		<label>Monday: <input type="time" name="week21" /></label> <input type="time" name="week22" /></label>
+		<div></div>
+		<label>Tuesday: <input type="time" name="week31" /></label> <input type="time" name="week32" /></label>
+		<div></div>
+		<label>Wednesday: <input type="time" name="week41" /></label> <input type="time" name="week42" /></label> 	
+		<div></div>
+		<label>Thursday: <input type="time" name="week51" /></label> <input type="time" name="week52" /></label>
+		<div></div>
+		<label>Friday: <input type="time" name="week61" /></label> <input type="time" name="week62" /></label> 
+		<div></div>
+		<label>Saturday: <input type="time" name="week71" /></label> <input type="time" name="week72" /></label>  
+    </div>
+	<hl></hl>
+    <div class="button-section">
+     <input type="submit" name="Working_hours" />
+    </div>
+</form>
+</div>                                                                                                               
+       
+</body>
+</html>
+ 

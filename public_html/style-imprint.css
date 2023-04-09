@@ -1,0 +1,110 @@
+html,body
+{
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+.header{
+    width: 100vw;
+    min-height: 100vh;
+    background-position: center;
+    background-color: white;
+    background-size: cover;
+    position: relative;
+    align-content: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+nav{
+    height: 4.5vh;
+    display: flex;
+    padding: 2% 2.5%;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-right: 6.5vw;
+    
+}
+
+.header a headerlogo img{
+    width: 12vw;
+    margin-left: 2.45vw;
+    margin-top: 0.9vh;
+    
+}
+nav ul li a homeicon img{
+    width: 6.134vw;
+}
+nav ul li a calendaricon img{
+    width: 7.90vw;
+}
+nav ul li a reporticon img{
+    width: 6.99vw;
+}
+nav ul li a imprinticon img{
+    width: 6.99vw;
+}
+action-row{
+    align-items: center;
+    display: flex;
+    margin-right: 2.06vw;
+}
+action-row notifications img{
+    width: 2.049vw;
+    margin-right: 2.06vw;
+}
+action-row userprofile img{
+     width: 3.66vw;
+}
+.nav-links{
+    flex: 1;
+    text-align: center;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 30px;
+    position: relative;
+    
+}
+.nav-links ul li a{
+    color: #2E2E2E;
+    text-decoration: none;
+    font-size: 15px;
+    align-content: center
+        
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+        
+}
+.disclaimer{
+    display: block;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+.disclaimer  h1{
+    font-size: 52px;
+    }
+.disclaimer p{
+        font-size: 14px;
+        text-align: justify;
+        margin: 20px 0;
+        line-height: 25px;
+    }
